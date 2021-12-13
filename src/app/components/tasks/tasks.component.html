@@ -1,1 +1,8 @@
-<TaskItem *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)"></TaskItem>
+<AddTask (onAddTask)="addTask($event)"></AddTask>
+<TaskItem
+*ngFor="let task of tasks"
+[task]="task"
+(onDeleteTask)="deleteTask(task)"
+(onToggleReminder)="toggleReminder(task)"
+>
+</TaskItem>
